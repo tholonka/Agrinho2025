@@ -71,10 +71,14 @@ p {
 
 /* Imagens das seções */
 .section-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    width: 100%;               /* ocupa toda a largura do container */
+    max-width: 800px;          /* limite máximo para evitar distorções em telas grandes */
+    height: auto;              /* mantém a proporção da imagem */
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: block;            /* remove espaços indesejados ao redor */
+    margin-left: auto;         /* centraliza a imagem */
+    margin-right: auto;
 }
 
 /* Estilo do formulário */
@@ -114,15 +118,17 @@ form button:hover {
 /* Estilo da galeria */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* ajusta as colunas de forma responsiva */
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .gallery img {
-    width: 100%;
+    width: 100%;               /* ocupa toda a largura da célula da grade */
+    height: auto;              /* mantém a proporção da imagem */
     border-radius: 8px;
     transition: transform 0.3s ease;
+    display: block;            /* remove espaços extras */
 }
 
 .gallery img:hover {
