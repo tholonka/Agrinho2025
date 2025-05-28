@@ -1,148 +1,249 @@
-/* Resetando estilos padrões */
+/* Reset e base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f0f4f8;
+  color: #333;
 }
 
-/* Estilo do cabeçalho */
+/* Cabeçalho */
 header {
-    background: #35424a;
-    color: #fff;
-    padding: 20px 0;
+  background: linear-gradient(135deg, #6ab7ff, #00d4ff);
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 header h1 {
-    text-align: center;
-    font-size: 2.5em;
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
 }
 
-nav ul li {
-    margin: 0 15px;
+/* Animação de partículas no fundo do header */
+.header-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  background: rgba(255,255,255,0.7);
+  animation: floatUp 20s linear infinite;
+}
+@keyframes floatUp {
+  0% { transform: translateY(100%) scale(0.5); opacity: 0.3; }
+  50% { opacity: 0.6; transform: translateY(0) scale(1); }
+  100% { transform: translateY(-100%) scale(0.5); opacity: 0.3; }
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
+/* Seção do Campo */
+section#campo {
+  padding: 50px 20px;
+  background-color: #e0f7fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+#campo h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #00796b;
 }
 
-/* Estilo das seções */
-section {
-    padding: 40px 20px;
-    margin: 20px 0;
+#campo p {
+  max-width: 700px;
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* Imagem do campo com efeito interativo */
+.campo-img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-align: center;
+.campo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
 
-p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    text-align: justify;
+/* Seção da Cidade */
+section#cidade {
+  padding: 50px 20px;
+  background-color: #ffe0b2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* Imagens das seções */
-.section-image {
-    width: 100%;               /* ocupa toda a largura do container */
-    max-width: 800px;          /* limite máximo para evitar distorções em telas grandes */
-    height: auto;              /* mantém a proporção da imagem */
-    border-radius: 6px;
-    margin-bottom: 10px;
-    display: block;            /* remove espaços indesejados ao redor */
-    margin-left: auto;         /* centraliza a imagem */
-    margin-right: auto;
+#cidade h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #ef6c00;
 }
 
-/* Estilo do formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#cidade p {
+  max-width: 700px;
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
-form label {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-form input, form textarea {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    background: #35424a;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-}
-
-form button:hover {
-    background: #2a3c3e;
-}
-
-/* Estilo da galeria */
+/* Galeria de fotos da cidade */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* ajusta as colunas de forma responsiva */
-    gap: 10px;
-    margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  width: 90%;
+  max-width: 900px;
+  margin-top: 20px;
 }
 
 .gallery img {
-    width: 100%;               /* ocupa toda a largura da célula da grade */
-    height: auto;              /* mantém a proporção da imagem */
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    display: block;            /* remove espaços extras */
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery img:hover {
-    transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Seção de Conexão */
+section#conexao {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffd54f, #ffb300);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#conexao h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #f57c00;
+}
+
+#conexao p {
+  max-width: 700px;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #f57c00;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #ef6c00;
+}
+
+/* Seção de contato */
+section#contato {
+  padding: 50px 20px;
+  background-color: #c8e6c9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#contato h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #388e3c;
+}
+
+form {
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #388e3c;
+  box-shadow: 0 0 8px rgba(56, 142, 60, 0.3);
+}
+
+form button {
+  background-color: #388e3c;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #2e7d32;
 }
 
 /* Rodapé */
 footer {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1em;
 }
 
-footer p {
-    font-size: 1em;
+/* Responsividade geral */
+@media(max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+  section h2 {
+    font-size: 1.8em;
+  }
 }

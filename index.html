@@ -1,89 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site sobre a conexão entre campo e cidade.">
-    <title>Conexão Campo e Cidade</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Festejando a Conexão entre Campo e Cidade</title>
+<!-- Google Fonts para um visual moderno -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+<!-- Link para o CSS externo -->
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!-- Fundo animado de partículas no header -->
+<div class="header-background" id="particles"></div>
+
     <header>
-        <div class="container">
-            <h1>Conexão Campo e Cidade</h1>
-            <nav>
-                <ul>
-                    <li><a href="#campo">O Campo</a></li>
-                    <li><a href="#cidade">A Cidade</a></li>
-                    <li><a href="#beneficios">Benefícios da Conexão</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+  <h1>Festejando a Conexão<br/> entre Campo e Cidade</h1>
+  <p>Unindo tradições, modernidade e natureza em um só lugar</p>
     </header>
 
-    <section id="campo" class="section">
-        <div class="container">
-            <h2>O Campo</h2>
-            <img src="img/download.jpeg" alt="Paisagem rural" class="section-image">
-            <p>A vida no campo é caracterizada por um contato mais direto com a natureza, uma produção mais orgânica e uma sensação de tranquilidade. A conexão com a terra e as tradições agrícolas são aspectos que definem o campo.</p>
+<!-- Seção Campo -->
+<section id="campo">
+  <h2>O Encanto do Campo</h2>
+  <p>O campo representa a tradição, a natureza e a simplicidade. É onde nossas raízes crescem e se fortalecem, trazendo paz e harmonia para nossas vidas.</p>
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Campo" class="campo-img" />
+    </section>
+
+<!-- Seção Cidade -->
+<section id="cidade">
+  <h2>Vibrante Vida Urbana</h2>
+  <p>A cidade é o símbolo de inovação, cultura e movimento. Seus ritmos acelerados conectam pessoas e ideias, criando um ambiente de crescimento constante.</p>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cidade 1" />
+    <img src="https://images.unsplash.com/photo-1494526585095-c4185f1a96f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cidade 2" />
+    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a96f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cidade 3" />
+    <img src="https://images.unsplash.com/photo-1494526585095-c4185f1a96f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cidade 4" />
         </div>
     </section>
 
-    <section id="cidade" class="section">
-        <div class="container">
-            <h2>A Cidade</h2>
-            <img src="img/ciudad-de-panama-e1559425775972-800x400.jpg" alt="Paisagem urbana" class="section-image">
-            <p>Já a cidade representa o desenvolvimento urbano, as inovações tecnológicas e a vida acelerada. No entanto, a urbanização também traz desafios, como a falta de espaço e o estresse diário.</p>
-        </div>
+<!-- Seção Conexão -->
+<section id="conexao">
+  <h2>Conectando Campo e Cidade</h2>
+  <p>A união entre o rural e o urbano fortalece nossa cultura e promove o desenvolvimento sustentável. Celebramos essa conexão que enriquece nossas vidas.</p>
+  <a href="#contato" class="btn">Participe da Festa</a>
     </section>
 
-    <section id="beneficios" class="section">
-        <div class="container">
-            <h2>Benefícios da Conexão</h2>
-            <img src="img/capa_tecnologia.webp" alt="Conexão entre campo e cidade" class="section-image">
-            <p>Quando há uma conexão forte entre campo e cidade, ambos os lados se beneficiam. O campo fornece alimentos frescos e orgânicos para as cidades, enquanto as cidades oferecem infraestrutura e inovações tecnológicas para melhorar a vida rural.</p>
-        </div>
-    </section>
-
-    <section id="galeria" class="section">
-        <div class="container">
-            <h2>Galeria</h2>
-            <p>Veja algumas imagens que ilustram a conexão entre o campo e a cidade.</p>
-            <div class="gallery">
-                <img src="img/download.jpeg" alt="Campo 1">
-                <img src="img/tecnologia-no-campo.jpg" alt="Campo 2">
-                <img src="cidade1.jpg" alt="Cidade 1">
-                <img src="cidade2.jpg" alt="Cidade 2">
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="section">
-        <div class="container">
-            <h2>Contato</h2>
-            <form action="#">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Enviar</button>
+<!-- Seção Contato -->
+<section id="contato">
+  <h2>Fale Conosco</h2>
+  <form id="formContato">
+    <input type="text" placeholder="Seu nome" required />
+    <input type="email" placeholder="Seu email" required />
+    <textarea rows="4" placeholder="Sua mensagem" required></textarea>
+    <button type="submit">Enviar mensagem</button>
             </form>
-        </div>
     </section>
 
+<!-- Rodapé -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Conexão Campo e Cidade. Todos os direitos reservados.</p>
-        </div>
+  <p>&copy; 2024 Festa Conexão Campo & Cidade. Todos os direitos reservados.</p>
     </footer>
+
+<!-- Script para partículas no header -->
+<script>
+// Gerar partículas no fundo do header
+const particlesContainer = document.getElementById('particles');
+
+for(let i=0; i<30; i++) {
+  const size = Math.random() * 20 + 10; // Tamanho variável
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+  particle.style.top = `${Math.random() * 100}%`;
+  particle.style.left = `${Math.random() * 100}%`;
+  particle.style.backgroundColor = `rgba(255,255,255,${Math.random()*0.5 + 0.2})`;
+  particle.style.animationDuration = `${15 + Math.random()*10}s`;
+  particlesContainer.appendChild(particle);
+}
+</script>
 
 </body>
 </html>
